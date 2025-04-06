@@ -3,8 +3,6 @@ class_name UnitGroup
 
 
 signal turn_complete
-signal attack
-signal defeated
 
 @export
 var group_name: String
@@ -121,7 +119,19 @@ func _unhandled_input(event: InputEvent) -> void:
 				EventBus.hide_unit_move_range_highlight.emit(old_unit)
 
 func _step_turn_ai() -> void:
-	_end_turn()
+	
+	var unused_units := get_unused_units()
+	
+	if unused_units.is_empty():
+		_end_turn()
+		return
+	var unit : UnitInstance = unused_units.front()
+	
+	var new_cell : Vector2i = unit.get_moveable_cells().pick_random()
+	await unit.move_to(new_cell)
+	unit.taken_turn = true
+	EventBus.update_pathfinding.emit()
+	_step_turn()
 
 
 func _connect_current_unit_signals() -> void:
