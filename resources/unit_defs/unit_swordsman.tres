@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="UnitDef" load_steps=3 format=3 uid="uid://dujwxmd1u4cch"]
+
+[ext_resource type="Script" uid="uid://bcpup1a4evrxb" path="res://scripts/resource_defs/unit_def.gd" id="1_upovh"]
+[ext_resource type="SpriteFrames" uid="uid://dukpgf56t8h07" path="res://resources/sprite_frames/sprite_frames_unknown_unit.tres" id="2_omomy"]
+
+[resource]
+script = ExtResource("1_upovh")
+name = "Swordsman"
+sprite_frames = ExtResource("2_omomy")
+max_health = 10
+min_range = 1
+max_range = 1
+move_range = 3
+metadata/_custom_type_script = "uid://bcpup1a4evrxb"

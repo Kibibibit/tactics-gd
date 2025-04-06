@@ -1,0 +1,58 @@
+[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://dukpgf56t8h07"]
+
+[ext_resource type="Texture2D" uid="uid://c774dy57t1u2u" path="res://assets/textures/atlas_textures/unknown_unit.png" id="1_c52ru"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhwr3"]
+atlas = ExtResource("1_c52ru")
+region = Rect2(0, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vhwr3")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vhwr3")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vhwr3")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vhwr3")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vhwr3")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vhwr3")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]

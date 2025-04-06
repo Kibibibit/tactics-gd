@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=3 uid="uid://bmj4paabl8l56"]
+
+[ext_resource type="Theme" uid="uid://ibi06mcu1u03" path="res://resources/themes/ui_theme.tres" id="1_7ljv2"]
+[ext_resource type="Material" uid="uid://cq2gnwe8a3f6k" path="res://resources/materials/shader_materials/material_shader_wipe.tres" id="1_kemie"]
+[ext_resource type="Script" uid="uid://t0jfxsdxkhk" path="res://scenes/animations/turn_start_animation.gd" id="2_mw15t"]
+
+[sub_resource type="Animation" id="Animation_kemie"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation_progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kemie"]
+_data = {
+&"RESET": SubResource("Animation_kemie")
+}
+
+[sub_resource type="Animation" id="Animation_mw15t"]
+resource_name = "turn_start"
+length = 2.0
+step = 0.0166667
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation_progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.15, 0.487406, 0.5, -0.25, 0, 0.25, 0, 0.5, -0.25, 0, 0.65, 0.0142015, 1.5, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.75, 1.25, 2)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_65nro"]
+_data = {
+&"turn_start": SubResource("Animation_mw15t")
+}
+
+[node name="TurnStartAnimation" type="ColorRect"]
+material = ExtResource("1_kemie")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_7ljv2")
+color = Color(0, 0.223529, 1, 0.65098)
+script = ExtResource("2_mw15t")
+wipe_width = 0.25
+group_name = "GROUP"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -258.0
+offset_top = 248.5
+offset_bottom = 298.5
+theme = ExtResource("1_7ljv2")
+text = "GROUP TURN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_kemie"),
+&"turn_start_animations": SubResource("AnimationLibrary_65nro")
+}

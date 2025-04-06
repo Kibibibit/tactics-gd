@@ -1,0 +1,26 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="tactics-gd"
+run/main_scene="uid://bubee4evxsg0a"
+config/features=PackedStringArray("4.4", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Constants="*res://scripts/autoloads/constants.gd"
+EventBus="*res://scripts/autoloads/event_bus.gd"
+PathFinding="*res://scripts/autoloads/path_finding.gd"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

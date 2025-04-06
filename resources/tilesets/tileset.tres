@@ -1,0 +1,21 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://djom1qcxxhfju"]
+
+[ext_resource type="Texture2D" uid="uid://dbdgdchet0pn0" path="res://resources/atlas/tile_atlas.tres" id="1_ymr1o"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xmig2"]
+texture = ExtResource("1_ymr1o")
+0:0/0 = 0
+0:0/0/custom_data_0 = -1
+1:0/0 = 0
+1:0/0/custom_data_0 = 1
+0:1/0 = 0
+0:1/0/custom_data_0 = -1
+1:1/0 = 0
+1:1/0/custom_data_0 = -1
+0:2/0 = 0
+0:2/0/custom_data_0 = -1
+
+[resource]
+custom_data_layer_0/name = "Cost"
+custom_data_layer_0/type = 2
+sources/0 = SubResource("TileSetAtlasSource_xmig2")

@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cq2gnwe8a3f6k"]
+
+[ext_resource type="Shader" uid="uid://qvvs40kxw8es" path="res://resources/materials/shader_materials/shader_wipe.gdshader" id="1_3cmyr"]
+
+[resource]
+shader = ExtResource("1_3cmyr")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+shader_parameter/width = 0.25
+shader_parameter/matrix = Projection(0, 0.5, 0.125, 0.625, 0.75, 0.25, 0.875, 0.375, 0.1875, 0.6875, 0.0625, 0.5625, 0.9375, 0.4375, 0.8125, 0.3125)

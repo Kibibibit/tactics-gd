@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cn0ueotvkj47q"]
+
+[ext_resource type="Script" uid="uid://b04vhrrmtv1n8" path="res://scripts/unit_nodes/unit_instance.gd" id="1_a5i3m"]
+[ext_resource type="SpriteFrames" uid="uid://dukpgf56t8h07" path="res://resources/sprite_frames/sprite_frames_unknown_unit.tres" id="2_hurbw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hurbw"]
+size = Vector2(16, 16)
+
+[node name="UnitScene" type="Node2D" node_paths=PackedStringArray("sprite", "mouse_area")]
+script = ExtResource("1_a5i3m")
+sprite = NodePath("AnimatedSprite2D")
+mouse_area = NodePath("MouseArea")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_hurbw")
+animation = &"idle"
+
+[node name="MouseArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MouseArea"]
+shape = SubResource("RectangleShape2D_hurbw")
