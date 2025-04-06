@@ -49,5 +49,10 @@ position = Vector2(568, 328)
 unit_def = ExtResource("6_6xh4u")
 cell = Vector2i(35, 20)
 
+[node name="UnitScene2" parent="Units/EnemyGroup" instance=ExtResource("5_48ne7")]
+position = Vector2(600, 296)
+unit_def = ExtResource("6_6xh4u")
+cell = Vector2i(37, 18)
+
 [node name="UI" type="CanvasLayer" parent="."]
 script = ExtResource("7_cyt5c")
