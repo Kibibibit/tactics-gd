@@ -56,6 +56,8 @@ func move_to(new_cell: Vector2i) -> void:
 	await unit_finished_move
 
 func _process(delta: float) -> void:
+	if Engine.is_editor_hint():
+		return
 	position = position.lerp(_cell_world_pos(cell), 30.0*delta)
 	
 	if moving:
