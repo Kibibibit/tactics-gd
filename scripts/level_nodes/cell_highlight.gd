@@ -21,6 +21,7 @@ func _highlight_cell(cell: Vector2i, type: Type) -> void:
 	
 func _clear_highlights() -> void:
 	_highlights.clear()
+	_movement_ranges.clear()
 	queue_redraw()
 
 func _cell_to_rect(cell: Vector2i) -> Rect2:
