@@ -125,7 +125,7 @@ func _step_turn_ai() -> void:
 	if unused_units.is_empty():
 		_end_turn()
 		return
-	var unit : UnitInstance = unused_units.front()
+	var unit : UnitInstance = unused_units.pick_random()
 	
 	var new_cell : Vector2i = unit.get_moveable_cells().pick_random()
 	await unit.move_to(new_cell)
